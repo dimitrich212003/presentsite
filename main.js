@@ -3,7 +3,9 @@ const container = document.querySelector(".container");
 const screens = document.querySelectorAll(".screen");
 
 burger.addEventListener("click", () => {
-  container.classList.toggle("active");
+  setTimeout(() => {
+    container.classList.toggle("active");
+  }, 500); // задержка в 1000 миллисекунд (1 секунда)
 })
 
 function replaceBg(id) {
