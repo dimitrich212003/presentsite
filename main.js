@@ -1,6 +1,7 @@
 const burger = document.querySelector(".burger");
 const container = document.querySelector(".container");
 const screens = document.querySelectorAll(".screen");
+const alert = document.querySelector(".mobile-alert");
 
 burger.addEventListener("click", () => {
   setTimeout(() => {
@@ -37,3 +38,19 @@ function changeBg() {
 }
 
 changeBg();
+
+function handleOrientationChange(mql) {
+  if (mql.matches) {
+    alert.classList.remove("show");
+    setTimeout(() => {
+      alert.style.display = "none";
+    }, 800);
+  } else {
+    alert.style.display = "flex";
+    alert.classList.add("show");
+  }
+}
+
+var mql = window.matchMedia("(orientation: landscape)");
+mql.addListener(handleOrientationChange);
+handleOrientationChange(mql);

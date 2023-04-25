@@ -147,6 +147,31 @@ header {
   text-decoration: none;
 }
 
+.mobile-alert {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  color: #eee;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  line-height: 28px;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: 0.3s ease-in;
+  padding: 0 30px;
+}
+
+.show {
+  opacity: 1;
+}
+
 .shadow {
   position: absolute;
   width: 100%;
